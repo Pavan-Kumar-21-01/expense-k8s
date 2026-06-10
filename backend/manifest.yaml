@@ -9,14 +9,14 @@ data:
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: mysbackendql
+  name: backend
   namespace: expense
   labels:
     app: backend
     tier: app
     project: expense
 spec:
-  replicas: 1
+  replicas: 3
   selector:
     matchLabels:
       app: backend
@@ -31,7 +31,7 @@ spec:
     spec:
       containers:
       - name: backend-cont
-        image: joindevops/backend:v1
+        image: 945360925177.dkr.ecr.us-east-1.amazonaws.com/expense/backend
         envFrom:
         - configMapRef:
             name: backend
