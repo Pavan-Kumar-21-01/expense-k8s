@@ -31,7 +31,7 @@ spec:
     spec:
       containers:
       - name: backend-cont
-        image: 945360925177.dkr.ecr.us-east-1.amazonaws.com/expense/backend
+        image: joindevops/backend:1.0.0
         envFrom:
         - configMapRef:
             name: backend
